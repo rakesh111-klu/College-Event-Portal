@@ -1,165 +1,27 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>College Event Portal</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f5fa;
-        }
-
-        /* Flexbox Navbar */
-        header {
-            background: #243b64;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: #dce8ff;
-        }
-
-        .hero h2 {
-            color: #243b64;
-            margin-bottom: 10px;
-        }
-
-        /* CSS Grid Events */
-        .events {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px #ccc;
-            text-align: center;
-        }
-
-        .card h3 {
-            color: #243b64;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            margin: 10px 0;
-        }
-
-        button {
-            background: #243b64;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #4169a1;
-        }
-
-        footer {
-            background: #243b64;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        @media (max-width: 500px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+<title>College Event Portal</title>
+<style>
+body { font-family: Arial; margin: 0; background: #eee; }
+header { background: navy; color: white; padding: 15px; display: flex; justify-content: space-between; }
+nav { display: flex; gap: 15px; }
+nav a { color: white; text-decoration: none; }
+h2 { text-align: center; }
+.events { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; padding: 20px; }
+.card { background: white; padding: 20px; text-align: center; border-radius: 8px; }
+button { background: navy; color: white; padding: 8px; border: none; }
+footer { background: navy; color: white; text-align: center; padding: 10px; }
+</style>
 </head>
 <body>
-
-    <header>
-        <h1>College Events</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#events">Events</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <h2>Welcome to Our College Event Portal</h2>
-        <p>Discover events, showcase your talent, and register today!</p>
-    </section>
-
-    <section class="events" id="events">
-        <div class="card">
-            <h3>Tech Fest</h3>
-            <p>Date: 25 October 2026</p>
-            <p>Explore technology and innovation.</p>
-            <button onclick="register('Tech Fest')">Register</button>
-        </div>
-
-        <div class="card">
-            <h3>Cultural Fest</h3>
-            <p>Date: 28 October 2026</p>
-            <p>Enjoy music, dance, and drama.</p>
-            <button onclick="register('Cultural Fest')">Register</button>
-        </div>
-
-        <div class="card">
-            <h3>Sports Meet</h3>
-            <p>Date: 30 October 2026</p>
-            <p>Participate in exciting sports.</p>
-            <button onclick="register('Sports Meet')">Register</button>
-        </div>
-
-        <div class="card">
-            <h3>Workshop</h3>
-            <p>Date: 2 November 2026</p>
-            <p>Learn new skills from experts.</p>
-            <button onclick="register('Workshop')">Register</button>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <p>Contact: events@college.edu</p>
-        <p>&copy; 2026 College Event Portal</p>
-    </footer>
-
-    <script>
-        function register(eventName) {
-            alert("Successfully registered for " + eventName + "!");
-        }
-    </script>
-
+<header><h3>College Events</h3><nav><a href="#">Home</a><a href="#events">Events</a></nav></header>
+<h2>Upcoming Events</h2>
+<div class="events" id="events">
+<div class="card"><h3>Tech Fest</h3><p>25 October</p><button onclick="alert('Registered!')">Register</button></div>
+<div class="card"><h3>Cultural Fest</h3><p>28 October</p><button onclick="alert('Registered!')">Register</button></div>
+<div class="card"><h3>Sports Meet</h3><p>30 October</p><button onclick="alert('Registered!')">Register</button></div>
+</div>
+<footer>College Event Portal © 2026</footer>
 </body>
 </html>
